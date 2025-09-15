@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   buildPipelineSettings:
-    enable: 0
+    enable: 1
     linkXmlProcessCallbackOrder: 10000
     obfuscationProcessCallbackOrder: 10000
   assemblySettings:
@@ -53,8 +53,6 @@ MonoBehaviour:
   constEncryptSettings:
     encryptionLevel: 1
     ruleFiles: []
-  removeConstFieldSettings:
-    ruleFiles: []
   evalStackObfusSettings:
     ruleFiles: []
   fieldEncryptSettings:
@@ -83,9 +81,6 @@ MonoBehaviour:
       garbageCodeType: 1
       outputPath: Assets/Obfuz/GarbageCode
     additionalTasks: []
-  watermarkSettings:
-    text: Obfuscated by Obfuz
-    signatureLength: 256
   polymorphicDllSettings:
     enable: 1
     codeGenerationSecretKey: obfuz-polymorphic-key
