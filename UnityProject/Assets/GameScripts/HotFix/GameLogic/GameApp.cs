@@ -5,6 +5,7 @@ using GameLogic;
 using Obfuz;
 #endif
 using TEngine;
+using UnityEngine;
 #pragma warning disable CS0436
 
 
@@ -32,13 +33,19 @@ public partial class GameApp
         Log.Warning("======= StartGameLogic =======");
         StartGameLogic();
     }
-    
+
     private static void StartGameLogic()
     {
+#if PLATFORM_WEIXINMINIGAME
+        WeixinMiniGameInput.mobileKeyboardSupport = true;
+#endif
+
         // GameEvent.Get<ILoginUI>().ShowLoginUI();
-        GameModule.UI.ShowUIAsync<BattleMainUI>();
+
+        // GameModule.UI.ShowUIAsync<BattleMainUI>();
+        GameModule.UI.ShowUIAsync<LoginUI>();
     }
-    
+
     private static void Release()
     {
         SingletonSystem.Release();
