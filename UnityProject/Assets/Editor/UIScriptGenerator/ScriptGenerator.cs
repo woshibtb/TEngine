@@ -64,12 +64,12 @@ namespace TEngine.Editor.UI
                     var widgetPrefix = $"{(ScriptGeneratorSetting.GetCodeStyle() == UIFieldCodeStyle.MPrefix ? "m_" : "_")}{ScriptGeneratorSetting.GetWidgetName()}";
                     if (root.name.StartsWith(widgetPrefix))
                     {
-                        strFile.Append("\tclass " + root.name.Replace(widgetPrefix, "") + " : UIWidget\n");
+                        strFile.Append("\tpartial class " + root.name.Replace(widgetPrefix, "") + " : UIWidget\n");
                     }
                     else
                     {
                         strFile.Append($"\t[Window(UILayer.UI,location:\"{root.name}\")]\n");
-                        strFile.Append("\tclass " + root.name + " : UIWindow\n");
+                        strFile.Append("\tpartial class " + root.name + " : UIWindow\n");
                     }
                     
                     strFile.Append("\t{\n");
