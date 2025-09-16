@@ -16,6 +16,10 @@
 
 # WX
 /[Ww][Xx]Build
+[Aa]ssets/WebGLTemplates
+[Aa]ssets/WX-WASM-SDK-V2
+[Aa]ssets/WebGLTemplates.meta
+[Aa]ssets/WX-WASM-SDK-V2.meta
 
 #DLL
 [Aa]ssets/AssetRaw/DLL
